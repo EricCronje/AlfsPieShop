@@ -1,7 +1,7 @@
 /*###############################################################################################################
  * Program.cs
  *###############################################################################################################  
- *  Version 15.0.1
+ *  Version 24.0.1
  *###############################################################################################################
  *#1    -   Add -   Created the empty dot net core application                      - TB10  - 20241009  - V1.0.0
  *#2    -   Mod -   Removed the middle ware app.MapGet("/", () => "Hello World!");  - TB10  - 20241009  - V1.0.1
@@ -17,9 +17,19 @@
  *#12   -   Add -   the interface ICategoryRepository - with properties             - TB10  - 20241009  - V11.0.1
  *#13   -   Add -   AddScoped<ICategoryRepository, MockCategoryRepository>()        - TB10  - 20241009  - V12.0.1
  *#14   -   Add -   AddScoped<IPieRepository, MockPieRepository>()                  - TB10  - 20241009  - V13.0.1
- *
  *#15   -   Add -   Add Controllers folder                                          - TB10  - 20241009  - V14.0.1
  *#16   -   Add -   Add Controller PieController                                    - TB10  - 20241009  - V15.0.1
+ *
+ *#17   -   Add -   Add Folder View                                                 - TB10  - 20241009  - V16.0.1
+ *#18   -   Add -   Add Folder Pie                                                  - TB10  - 20241009  - V17.0.1
+ *#19   -   Add -   Add Action result List in the Pie Controller                    - TB10  - 20241009  - V18.0.1
+ *              -   IActionResult List()
+ *#20   -   Add -   Add the View and test static html                               - TB10  - 20241009  - V19.0.1
+ *#21   -   Add -   The folder ViewModels                                           - TB10  - 20241009  - V20.0.1
+ *#22   -   Add -   The file PieListViewModel                                       - TB10  - 20241009  - V21.0.1
+ *#23   -   Mod -   Pie Controller to use the PieListViewModel class                - TB10  - 20241009  - V22.0.1
+ *#24   -   Mod -   View  for list to use the PieListViewModel class                - TB10  - 20241009  - V23.0.1
+ *#25   -   Add -   Added the constructor to the PieListViewModel                   - TB10  - 20241009  - V24.0.1
  *###############################################################################################################
  */
 using AlfsPieShop.Models;

@@ -1,7 +1,7 @@
 /*###############################################################################################################
  * Program.cs
  *###############################################################################################################  
- *  Version 30.0.1
+ *  Version 37.0.1
  *###############################################################################################################
  *#1    -   Add -   Created the empty dot net core application                      - TB10  - 20241009  - V1.0.0
  *#2    -   Mod -   Removed the middle ware app.MapGet("/", () => "Hello World!");  - TB10  - 20241009  - V1.0.1
@@ -30,13 +30,19 @@
  *#23   -   Mod -   Pie Controller to use the PieListViewModel class                - TB10  - 20241009  - V22.0.1
  *#24   -   Mod -   View  for list to use the PieListViewModel class                - TB10  - 20241009  - V23.0.1
  *#25   -   Add -   Added the constructor to the PieListViewModel                   - TB10  - 20241009  - V24.0.1
- 
  *#26   -   Add -   Create the shared folder in the views folder                    - TB10  - 20241009  - V25.0.1
  *#27   -   Add -   _Layout.cshtml in the shared folder                             - TB10  - 20241009  - V26.0.1
  *#28   -   Mod -   Mod the List action view page - move code to the layout         - TB10  - 20241009  - V27.0.1
  *#29   -   Add -   Create the _ViewStart.cshtml file in Views                      - TB10  - 20241009  - V28.0.1
  *#30   -   Add -   Create the _ViewImport.cshtml file in View                      - TB10  - 20241009  - V29.0.1
  *#31   -   Add -   add the using in the import file                                - TB10  - 20241009  - V30.0.1
+ *#32   -   Add -   added the final css to the layout file                          - TB10  - 20241009  - V31.0.1
+ *#33   -   Add -   added the final css to the Pie - action list                    - TB10  - 20241009  - V32.0.1
+ *#34   -   Add -   created the images folder in the wwwroot folder                 - TB10  - 20241009  - V33.0.1
+ *#35   -   Add -   created the css folder in the wwwroot folder                    - TB10  - 20241009  - V34.0.1
+ *#36   -   Add -   created the content under the image folder in the wwwroot folder- TB10  - 20241009  - V35.0.1
+ *#37   -   Add -   Added client side bootstrap                                     - TB10  - 20241009  - V36.0.1
+ *#37   -   Add -   Added jquery client side                                        - TB10  - 20241009  - V37.0.1
  *###############################################################################################################
  */
 using AlfsPieShop.Models;

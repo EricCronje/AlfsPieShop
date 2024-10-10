@@ -1,7 +1,7 @@
 /*###############################################################################################################
  * Program.cs
  *###############################################################################################################  
- *  Version 37.0.1
+ *  Version 42.0.1
  *###############################################################################################################
  *#1    -   Add -   Created the empty dot net core application                      - TB10  - 20241009  - V1.0.0
  *#2    -   Mod -   Removed the middle ware app.MapGet("/", () => "Hello World!");  - TB10  - 20241009  - V1.0.1
@@ -43,15 +43,21 @@
  *#36   -   Add -   created the content under the image folder in the wwwroot folder- TB10  - 20241009  - V35.0.1
  *#37   -   Add -   Added client side bootstrap                                     - TB10  - 20241009  - V36.0.1
  *#37   -   Add -   Added jquery client side                                        - TB10  - 20241009  - V37.0.1
+ *#38   -   Add -   Nuget packages Microsoft.EntityFrameworkCore.SQLServer          - TB10  - 20241010  - V38.0.1
+ *#39   -   Add -   Nuget packages Microsoft.EntityFrameworkCore.Tools              - TB10  - 20241010  - V39.0.1
+ *#39   -   Add -   DBContext                                                       - TB10  - 20241010  - V40.0.1
+ *#39   -   Add -   Connection string AppSettings.json                              - TB10  - 20241010  - V41.0.1
+ *#39   -   Add -   Added the builder.service in program.cs AddDBContext            - TB10  - 20241010  - V42.0.1
  *###############################################################################################################
  */
-using AlfsPieShop.Models;
+using AlfPieShop.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ICategoryRepository, MockCategoryRepository>();//#13
 builder.Services.AddScoped<IPieRepository, MockPieRepository>();//#14
-
+builder.Services.AddDbContext<AlfPieShopDBContext>(Options => { Options.UseSqlServer(builder.Configuration["ConnectionStrings:AlfPieShopDbContextConnection"]); }); //#39
 builder.Services.AddControllersWithViews(); //#3
 
 var app = builder.Build();

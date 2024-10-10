@@ -8,7 +8,7 @@
  *              -   Pie? GetPieById(int pieId);
  *###############################################################################################################
  */
-namespace AlfsPieShop.Models
+namespace AlfPieShop.Models
 {
     public interface IPieRepository
     {

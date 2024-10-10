@@ -12,29 +12,21 @@
  *###############################################################################################################
  */
 
-using AlfsPieShop.Models;
-using AlfsPieShop.ViewModels;
+using AlfPieShop.Models;
+using AlfPieShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AlfsPieShop.Controllers
+namespace AlfPieShop.Controllers
 {
-    public class PieController : Controller
+    public class PieController(IPieRepository pieRepository) : Controller
     {
-        private readonly ICategoryRepository _categoryRepository; //#1
-        private readonly IPieRepository _pieRepository; //#2
-
-        public PieController (ICategoryRepository categoryRepository, IPieRepository pieRepository) //#3
-        {
-            _categoryRepository = categoryRepository; //#4
-            _pieRepository = pieRepository; //#4
-        }
+        private readonly IPieRepository _pieRepository = pieRepository; //#2
 
         public IActionResult List() //#5
         {
             //ViewBag.CurrentCategory = "Cheese Pie"; //#5
             //return View(_pieRepository.AllPies); //#5
             PieListViewModel pieListModelView = new
-                PieListViewModel
                 (_pieRepository.AllPies, "Cheese Pie"); //#5
             return View(pieListModelView);//#5
         }

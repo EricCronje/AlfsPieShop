@@ -19,7 +19,7 @@
  *      -   Category Category       Cannot be null default!
  *###############################################################################################################
  */
-namespace AlfsPieShop.Models
+namespace AlfPieShop.Models
 {
     public class Pie
     {

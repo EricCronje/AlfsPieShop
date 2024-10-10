@@ -9,7 +9,7 @@
  *              -   List<Pie>? Pies
  *###############################################################################################################
  */
-namespace AlfsPieShop.Models
+namespace AlfPieShop.Models
 {
     public class Category
     {

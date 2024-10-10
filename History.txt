@@ -1,0 +1,109 @@
+What was done?
+
+#Added Nuget Packages for the Enity Frame work Core - Max's Pie Shop
+#?	-	Add	- Nuget package Microsoft.EntityFrameworkCore.SqlServer V8.0.10 			- TB10 - 20241010
+#?	-	Add	- Nuget package Microsoft.EntityFrameworkCore.Tools V8.0.10 				- TB10 - 20241010
+#?	-	Add	- DBcontext - intermeiatary between the program and the data base.			- TB10 - 20241010
+#?	-	Add	- class MaxsPieShopDBContext INHERIT DBcontext BASE CLASS					- TB10 - 20241010
+#?	-	Add	- using  in MaxsPieShopDBContext for Microsoft.EntityFrameWorkCore;			- TB10 - 20241010
+#?	-	Add	- constructor - in MaxsPieShopDBContext for Microsoft.EntityFrameWorkCore;	- TB10 - 20241010
+#?	-	Add	- entities - in MaxsPieShopDBContext for Microsoft.EntityFrameWorkCore;		- TB10 - 20241010
+			- Model classes.
+			- Expose using a DBSet
+#?	-	Add	- DBSet for category														- TB10 - 20241010			
+#?	-	Add	- DBSet for pie																- TB10 - 20241010			
+#?	-	Add	- Connection string in the app settings file	(appsettings.json)			- TB10 - 20241010
+#?	-	Add	- Real repositories, PieRepository and CategoryRepository					- TB10 - 20241010
+
+
+#Used 20241010:
+#*	-	OOP						- Inherit, base class, class
+#*	-	Nuget					- import Microsoft EntityFrameworkCore packages (Tools and SQLServer)
+#*	-	Visual studio 2022		- import Microsoft EntityFrameworkCore packages (Tools and SQLServer)
+#*	-	C#						- Used C#
+#*	-	MVC						- Pies applications
+#*	-	css						- styling Pie web applications
+#*	-	html					- scafolding for the web app
+#*	-	Bootstrap				- for the web app
+#*	-	RazorPages				- for the web app
+#*	-	Roslyn webserver		- for the web app
+#*	-	Entity framework core	- for the web app
+#*	-	classes					- for the web app
+#*	-	Models					- for the web app - domain
+#*	-	Controllers				- for the web app - manager
+#*	-	Views					- for the web app - templates
+#*	-	Entity					- for the web app - efcore - mapped them
+#*	-	DBsets					- EFC - Entity Framework Core - Match these! - able to load, update, floe to db.
+#*	-	LocalDB					- sqllocaldb info sqllocaldb start
+#*	-	LINQ					- linq
+#*	-	Dotnet Core				- Dotnet 8.0 Lts
+
+
+
+using
+
+using Microsoft.EntityFrameworkCore;
+
+constructor in  DBContext class
+
+        public MaxsPieShopDBContext ( DbContextOptions<MaxsPieShopDBContext>
+            options) : base(options) 
+        { 
+
+        }
+		
+Connection string
+
+"Server=(localdb)\MSSQLLocalDB;Integrated Security=true"
+
+
+$ sqllocaldb info "MSSQLLocalDB"
+Name:               mssqllocaldb
+Version:            15.0.4153.1
+Shared name:
+Owner:              LTLGUR2DQE\User
+Auto-create:        Yes
+State:              Running
+Last start time:    2024/10/10 13:27:53
+Instance pipe name: np:\\.\pipe\LOCALDB#A6FF8788\tsql\query
+
+
+
+SqlLocalDB.exe create "PieShopLocalDB"
+SqlLocalDB.exe share "PieShopLocalDB" "PieShopSharedLocalDB"
+SqlLocalDB.exe start "PieShopLocalDB"
+SqlLocalDB.exe info "PieShopLocalDB"
+REM The previous statement outputs the Instance pipe name for the next step
+
+sqlcmd -S np:\\.\pipe\LOCALDB#SHD0446C\tsql\query
+CREATE LOGIN NewLogin WITH PASSWORD = 'Passw0rd!!@52';
+GO
+CREATE USER NewLogin;
+GO
+EXIT
+
+
+
+sqlcmd -S np:\\.\pipe\LOCALDB#np:\\.\pipe\LOCALDB#SHD0446C\tsql\query\tsql\query
+
+
+PieShopLocalDB
+
+sqlcmd -S (Localdb)\PieShopLocalDB
+sqlcmd -S LTLGUR2DQE\SQLEXPRESS2022 -U "SqlAdmin" -P "Pass123"
+sqlcmd -S (Localdb)\MSSQLLocalDB
+
+
+Reset-SqlAdmin -SqlServer LTLGUR2DQE\SQLEXPRESS2022 -Login sqladmin -Force
+
+
+SQLServerManager16.msc
+
+
+
+Connection string:
+
+
+"ConnectionStrings":{
+"BethanysPieShopDbContextConnection":"Server=(localdb)\\mssqllocaldb;Database=BethanysPieShop@123456;Trusted_Connection=True;MultiplwActiveResultSets=true"
+}

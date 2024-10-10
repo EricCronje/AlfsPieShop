@@ -6,7 +6,7 @@
  *              -   IEnumerable<Category> AllCategories { get; }
  *###############################################################################################################
  */
-namespace AlfsPieShop.Models
+namespace AlfPieShop.Models
 {
     public interface ICategoryRepository
     {

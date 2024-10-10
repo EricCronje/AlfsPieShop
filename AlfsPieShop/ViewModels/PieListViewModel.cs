@@ -11,19 +11,13 @@
  *#4    -   Add -   Created the constructor to initialize Pies and CurrentCategory   - TB10  - 20241009  - V4.0.0
  *###############################################################################################################
  */
-using AlfsPieShop.Models;
+using AlfPieShop.Models;
 
-namespace AlfsPieShop.ViewModels
+namespace AlfPieShop.ViewModels
 {
-    public class PieListViewModel
+    public class PieListViewModel(IEnumerable<Pie> pies, string? currentCategory)
     {
-        public IEnumerable<Pie> Pies { get; } //#2
-        public string? CurrentCategory { get; } //#3
-
-        public PieListViewModel (IEnumerable<Pie> pies, string? currentCategory) //#4
-        {
-            Pies = pies;
-            CurrentCategory = currentCategory;
-        }
+        public IEnumerable<Pie> Pies { get; } = pies;
+        public string? CurrentCategory { get; } = currentCategory;
     }
 }

@@ -1,0 +1,22 @@
+What was done on APieShop?
+
+#Added Nuget Packages for the Enity Frame work Core - Max's Pie Shop
+#?	-	Add	- Nuget package Microsoft.EntityFrameworkCore.SqlServer V8.0.10 			- TB10 - 20241010
+#?	-	Add	- Nuget package Microsoft.EntityFrameworkCore.Tools V8.0.10 				- TB10 - 20241010
+#?	-	Add	- DBcontext - intermeiatary between the program and the data base.			- TB10 - 20241010
+#?	-	Add	- class MaxsPieShopDBContext INHERIT DBcontext BASE CLASS				- TB10 - 20241010
+#?	-	Add	- using  in MaxsPieShopDBContext for Microsoft.EntityFrameWorkCore;			- TB10 - 20241010
+#?	-	Add	- constructor - in MaxsPieShopDBContext for Microsoft.EntityFrameWorkCore;		- TB10 - 20241010
+#?	-	Add	- entities - in MaxsPieShopDBContext for Microsoft.EntityFrameWorkCore;			- TB10 - 20241010
+#			- Model classes.
+#			- Expose using a DBSet
+#?	-	Add	- DBSet for category									- TB10 - 20241010			
+#?	-	Add	- DBSet for pie										- TB10 - 20241010			
+#?	-	Add	- Connection string in the app settings file	(appsettings.json)			- TB10 - 20241010
+#?	-	Add	- Real repositories, PieRepository and CategoryRepository				- TB10 - 20241010
+#?	-	Mod	- Change the program.cs AddScoped to REpository types					- TB10 - 20241010
+#?	-	Mod	- added EnableRetryOnFailure on the UseSqlServer - to cater for transient errors	- TB10 - 20241010
+#?	-	Add	- Initial Migration									- TB10 - 20241010
+#?	-	Add	- Create database									- TB10 - 20241010
+#?	-	Add	- Static DBinitializer									- TB10 - 20241010
+#

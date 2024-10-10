@@ -19,6 +19,8 @@
  *      -   Category Category       Cannot be null default!
  *###############################################################################################################
  */
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace AlfPieShop.Models
 {
     public class Pie
@@ -28,6 +30,7 @@ namespace AlfPieShop.Models
         public string? ShortDescription { get; set; }//#2
         public string? LongDescription { get; set; }//#2
         public string? AllergyInformation { get; set; }//#2
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }//#2
         public string? ImageUrl { get; set; }//#2
         public string? ImageThumbnailUrl { get; set; }//#2

@@ -1,7 +1,7 @@
 /*###############################################################################################################
  * Program.cs
  *###############################################################################################################  
- *  Version 42.0.1
+ *  Version 60.2.1
  *###############################################################################################################
  *#1    -   Add -   Created the empty dot net core application                      - TB10  - 20241009  - V1.0.0
  *#2    -   Mod -   Removed the middle ware app.MapGet("/", () => "Hello World!");  - TB10  - 20241009  - V1.0.1
@@ -69,6 +69,13 @@
  *              -   see the {D2086ECD-3549-4C7F-A542-25E53FD0F9D1}.pdf              -       -           -
  *              -   located in \Docs\Defects                                        -       -           -
  *              -   (This is understandable - there is not database yet)            -       -           -
+ *#57   -   Add -   Initial migration                                               - TB10  - 20241011  - V56.0.1              
+ *#58   -   Add -   DBInitializr to seed the data                                   - TB10  - 20241011  - V58.0.1              
+ *#59   -   Add -   DBInitializr to program.cs                                      - TB10  - 20241011  - V59.0.1              
+ *#60   -   Bug -   Fix spelling mistake Pistachio                                  - TB10  - 20241011  - V59.1.1              
+ *#60   -   War -   Fix 3000 warning on the price for Pie POCO added decimal(18,2)  - TB10  - 20241011  - V59.2.1              
+ *#60   -   Out -   See the output in the documents of the page so far              - TB10  - 20241011  - V60.2.1              
+ *              -   {11D216C2-5962-48BF-949C-F9048FE548F3}.pdf                      -       -           -
  *###############################################################################################################
  */
 using AlfPieShop.Models;
@@ -91,5 +98,7 @@ if (app.Environment.IsDevelopment()) //#5
 }
 
 app.MapDefaultControllerRoute(); //#7
+
+DBInitializer.Seed(app);
 
 app.Run();
